@@ -7,8 +7,8 @@ export default class Compo extends Component {
     render () {
         return (
             <article>
-                Test component
-                <Link to={ routeCodes.VIEW_2 }>Back</Link>
+                <div>Test component</div>
+                <Link to={ routeCodes.VIEW_2 }>To View 2</Link>
             </article>
         );
     }

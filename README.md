@@ -7,7 +7,7 @@ First, install [Yeoman](http://yeoman.io) and generator-webpack-react using [npm
 
 ```bash
 npm install -g yo
-npm install -g generator-webpack-react
+npm install -g @davidlazic/generator-webpack-react
 ```
 
 Then generate your new project:
@@ -15,6 +15,24 @@ Then generate your new project:
 ```bash
 yo webpack-react
 ```
+
+## Environment tasks
+
+| Environment | Command           | Description |
+| ----------- |:-----------------:| ----------- |
+| Local       | **npm run local** | Run local Node / React with hot reloading enabled.
+| Development | **npm run dev**   | Run non-minified DEV build.
+| QA          | **npm run qa**    | Run minified QA build (same as PROD build for testing).
+| Production  | **npm run prod**  | Run production build.
+
+
+#### Other tasks
+
+| Task    | Command             | Description |
+| ------- |:-------------------:| ----------- |
+| Clean   | **npm run clean**   | Clean `dist` project directory.
+| ESLint  | **npm run lint**    | Run ES6 error linter.
+
 
 ## Getting To Know Yeoman
 
