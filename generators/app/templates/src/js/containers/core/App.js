@@ -36,10 +36,10 @@ export default class App extends Component {
         return (
             <section>
                 {
-                    React.Children.map(this.props.children, (child, index) =>
+                    React.Children.map(this.props.children, (child) =>
                         React.cloneElement(child, {
                             ping: this.pingUser.bind(this),
-                            key: index
+                            key: child.id
                         }))
                 }
             </section>
