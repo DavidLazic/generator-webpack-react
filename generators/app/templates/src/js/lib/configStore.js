@@ -4,7 +4,7 @@ import { createLogger } from 'redux-logger';
 import reducer from 'reducers';
 
 const loggerMiddleware = createLogger({ predicate: () => __DEV__ });
-const devToolsMiddleware = process.env.NODE_ENV !== 'production' && DevTools.instrument() || null;
+const devToolsMiddleware = process.env.NODE_ENV === 'local' && DevTools.instrument() || null;
 
 export function configStore (initialState) {
     const enhancer = compose(
