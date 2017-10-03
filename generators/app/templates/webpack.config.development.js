@@ -74,8 +74,8 @@ module.exports = {
                 use: [
                     'style-loader',
                     'css-loader',
-                    'postcss-loader',
-                    'sass-loader?sourceMap'
+                    'sass-loader?sourceMap',
+                    'postcss-loader'
                 ]
             },
             {

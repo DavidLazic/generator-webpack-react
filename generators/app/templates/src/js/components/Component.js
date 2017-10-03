@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { routeCodes } from 'routes';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 export default class Compo extends Component {
 
