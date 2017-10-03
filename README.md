@@ -5,6 +5,8 @@
 
 First, install [Yeoman](http://yeoman.io) and generator-webpack-react using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
+*Tested with node `v8.6.0`*
+
 ```bash
 npm install -g yo
 npm install -g @davidlazic/generator-webpack-react
