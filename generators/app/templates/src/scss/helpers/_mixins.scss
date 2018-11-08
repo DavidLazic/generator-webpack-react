@@ -1,0 +1,38 @@
+@mixin clearfix () {
+  &:after,
+  &:before {
+    display: table;
+    content: '';
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+@mixin centerX () {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@mixin centerY () {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin transition($time, $property: all, $easing: ease-in, $delay: 0s) {
+  -webkit-transition: $property $time $easing $delay;
+  transition: $property $time $easing $delay;
+}

@@ -1,5 +1,5 @@
-import * as Auth from './auth';
+import * as Test from './test.action';
 
-export const ActionCreators = Object.assign({},
-    Auth
-);
+export const ActionCreators = {
+  ...Test
+};

@@ -1,48 +1,32 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import t from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { ActionCreators } from 'actions';
-import { Api } from 'lib';
-import { PING } from 'constants/api';
+import { withRouter } from 'react-router';
 import * as types from 'actions/types';
 
 @connect(state => ({
-    oAuth: state.authReducer[types.USER]
+  Test: state.testReducer[types.TEST]
 }), dispatch => ({
-    actions: bindActionCreators(ActionCreators, dispatch)
+  actions: bindActionCreators(ActionCreators, dispatch)
 }))
-
-export default class App extends Component {
+class App extends Component {
 
     static propTypes = {
-        children: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired
-    }
-
-    /**
-     * @description
-     * Ping current user.
-     *
-     * @return {Function<Object>}
-     * @public
-     */
-    pingUser () {
-        Api.get(PING)
-            .then(user => this.props.actions.setUser(user));
+      Test: t.object.isRequired,
+      children: t.object.isRequired
     }
 
     render () {
-        return (
-            <section>
-                {
-                    React.Children.map(this.props.children, (child) =>
-                        React.cloneElement(child, {
-                            ping: this.pingUser.bind(this),
-                            key: child.id
-                        }))
-                }
-            </section>
-        );
+      console.log('Test', this.props.Test);
+
+      return (
+        <div className="">
+          { this.props.children }
+        </div>
+      );
     }
 }
+
+export default withRouter(App);
